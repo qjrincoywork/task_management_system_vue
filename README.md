@@ -1,5 +1,5 @@
 # task_management_system_vue 
-  - Please note that I used a different repository since task_management_system exists in my GitHub.
+  - Please note that I used a different repository name since task_management_system exists in my GitHub.
 
 In my case, I used docker to containerize them and utilize different ports due to other projects running on my device.
 You may need to install docker if you don't have yet. Install Docker Desktop here https://docs.docker.com/desktop/install/windows-install/
