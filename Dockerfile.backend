@@ -1,0 +1,25 @@
+FROM php:8.2-fpm
+
+# System deps
+RUN apt-get update && apt-get install -y \
+    git unzip libzip-dev libpng-dev libonig-dev libxml2-dev \
+    default-mysql-client \
+  && docker-php-ext-install pdo pdo_mysql mbstring xml gd zip \
+  && rm -rf /var/lib/apt/lists/*
+
+# Composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+WORKDIR /var/www/html
+
+# Opcache for prod readiness; disabled timestamp validation can be toggled via env
+RUN docker-php-ext-install opcache
+
+# Create non-root user
+RUN useradd -u 1000 -m www
+USER www
+
+CMD ["php-fpm"]
+
+
