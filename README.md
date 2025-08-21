@@ -21,6 +21,8 @@ You may need to install docker if you don't have yet. Install Docker Desktop her
  - npm install
  - npm run dev
 
+Note/Heads up: I was not able to finish the frontend side. I focused mainly on the backend side for the API and code standards.
+Thank you!
 
 # API Documentation
 [Task Management System Documentation](https://documenter.getpostman.com/view/14067001/2sB3BLhmpn)
