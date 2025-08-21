@@ -1,0 +1,7 @@
+/backend/public/build
+/backend/public/hot
+/backend/public/storage
+/backend/storage/*.key
+/backend/vendor
+/frontend/node_modules
+/backend.env
